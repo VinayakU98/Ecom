@@ -16,7 +16,7 @@ def store(request):
 
     products = Product.objects.all()
     context = {"products": products, "cartItems": cartItems}
-    return render(request, "store/store.html", context)
+    return render(request, "docs/store.html", context)
 
 
 def cart(request):
@@ -27,7 +27,7 @@ def cart(request):
     items = data["items"]
 
     context = {"items": items, "order": order, "cartItems": cartItems}
-    return render(request, "store/cart.html", context)
+    return render(request, "docs/cart.html", context)
 
 
 def checkout(request):
@@ -38,7 +38,7 @@ def checkout(request):
     items = data["items"]
 
     context = {"items": items, "order": order, "cartItems": cartItems}
-    return render(request, "store/checkout.html", context)
+    return render(request, "docs/checkout.html", context)
 
 
 def updateItem(request):
